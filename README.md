@@ -129,4 +129,3 @@ Abre `src/FileGenerator.java` y cambia el valor de `OUTPUT_FOLDER`:
 private static final String OUTPUT_FOLDER =
     "C:\\Users\\TuUsuario\\TuCarpeta\\Notas";
 ```
-Nico y la china

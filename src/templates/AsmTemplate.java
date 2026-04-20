@@ -1,28 +1,20 @@
 package templates;
 
-/**
- * Interfaz base para todas las plantillas de ensamblador.
- * 
- * Para agregar una nueva plantilla:
- * 1. Crea una nueva clase en esta carpeta (src/templates/)
- * 2. Implementa esta interfaz
- * 3. Rellena los 4 métodos con los datos de tu plantilla
- * 4. Registra la clase en TemplateRegistry.java
- */
+
 public interface AsmTemplate {
 
     /**
-     * El comando corto que usará el usuario, ej: "cb"
+     * El comando corto que usará el usuario
      */
     String getCommand();
 
     /**
-     * Número o identificador de la plantilla, ej: "001"
+     * Número o identificador de la plantilla
      */
     String getId();
 
     /**
-     * Nombre descriptivo de la plantilla, ej: "Codigo base"
+     * Nombre descriptivo de la plantilla
      */
     String getName();
 
@@ -37,8 +29,7 @@ public interface AsmTemplate {
     String getContent();
 
     /**
-     * Nombre del archivo .asm que se creará, sin extensión.
-     * ej: "codigo_base" → genera "codigo_base.asm"
+     * Nombre del archivo .asm que se creará
      */
     String getFileName();
 }

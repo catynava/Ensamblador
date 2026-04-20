@@ -1,13 +1,7 @@
 package templates;
 
-/**
- * Plantilla: Codigo Base 001
- * Comando: cb
- *
- * Puedes copiar este archivo para crear nuevas plantillas.
- * Solo cambia los valores de los métodos y registra la clase en TemplateRegistry.java
- */
-public class BaseCodeTemplate implements AsmTemplate {
+
+public class CodeTemplate implements AsmTemplate {
 
     @Override
     public String getCommand() {

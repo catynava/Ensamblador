@@ -1,8 +1,10 @@
 @echo off
 :: ============================================================
 ::  assembler-gen - Script de compilacion y ejecucion
-::  Ejecuta este archivo desde la carpeta raiz del proyecto
 :: ============================================================
+
+:: Cambiar al directorio donde esta este .bat
+cd /d "%~dp0"
 
 :: Crear carpeta de clases compiladas si no existe
 if not exist "out" mkdir out

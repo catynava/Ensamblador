@@ -1,39 +1,93 @@
 import templates.AsmTemplate;
-import templates.BaseCodeTemplate;
+import templates.BaseBucleTemplate;
+import templates.BaseCaracterTemplate;
+import templates.BaseCursorDiagonalTemplate;
+import templates.BaseForTemplate;
+import templates.BaseIfElseTemplate;
+import templates.BaseMessageTemplate;
+import templates.BasePantallaTemplate;
+import templates.BaseParpadeoInfinitoTemplate;
+import templates.BaseParpadeoLimiteTemplate;
+import templates.BaseParpadeoSalidaEspecificaTemplates;
+import templates.BaseParpadeoSalidaTemplate;
+import templates.BaseRectanguloTemplate;
+import templates.BaseSwitchTemplate;
+import templates.BaseTecladoEspecificoTemplate;
+import templates.BaseTecladoTemplate;
+import templates.BaseWhileTemplate;
+import templates.BucleTemplate;
+import templates.CaracterTemplate;
+import templates.CodeTemplate;
+import templates.CursorDiagonalTemplate;
+import templates.ForTemplate;
+import templates.IfelseTemplate;
+import templates.MessageTemplate;
+import templates.PantallaTemplate;
+import templates.ParpadeoInfinitoTemplate;
+import templates.ParpadeoLimiteTemplate;
+import templates.ParpadeoSalidaEspecificaTemplates;
+import templates.ParpadeoSalidaTemplate;
+import templates.RectanguloTemplate;
+import templates.SwitchTemplate;
+import templates.TecladoEspecificoTemplate;
+import templates.TecladoTemplate;
+import templates.WhileTemplate;
 
-// ============================================================
-//  REGISTRO DE PLANTILLAS
-// ============================================================
-//  Para agregar una nueva plantilla:
-//  1. Crea tu clase en src/templates/ implementando AsmTemplate
-//  2. Importa la clase aquí arriba (import templates.MiNuevaPlantilla;)
-//  3. Agrégala al array TEMPLATES abajo
-// ============================================================
 
 public class TemplateRegistry {
 
     /**
-     * Lista de todas las plantillas disponibles.
-     * Agrega nuevas instancias aquí para registrarlas.
+     * Lista de todas las plantillas
      */
     private static final AsmTemplate[] TEMPLATES = {
-        new BaseCodeTemplate(),
+        // --- PLANTILLAS COMPLETAS (con codigo base) ---
+        new CodeTemplate(),
+        new BaseMessageTemplate(),
+        new BaseIfElseTemplate(),
+        new BaseSwitchTemplate(),
+        new BaseWhileTemplate(),
+        new BaseBucleTemplate(),
+        new BaseForTemplate(),
+        new BaseTecladoTemplate(),
+        new BaseTecladoEspecificoTemplate(),
+        new BaseCaracterTemplate(),
+        new BasePantallaTemplate(),
+        new BaseRectanguloTemplate(),
+        new BaseParpadeoInfinitoTemplate(),
+        new BaseParpadeoLimiteTemplate(),
+        new BaseParpadeoSalidaTemplate(),
+        new BaseParpadeoSalidaEspecificaTemplates(),
+        new BaseCursorDiagonalTemplate(),
 
-        // AGREGA MÁS PLANTILLAS AQUÍ:
-        // new MiNuevaPlantilla(),
-        // new OtraPlantilla(),
+        // --- FRAGMENTOS DE CODIGO (solo el bloque) ---
+        new MessageTemplate(),
+        new IfelseTemplate(),
+        new SwitchTemplate(),
+        new WhileTemplate(),
+        new BucleTemplate(),
+        new ForTemplate(),
+        new TecladoTemplate(),
+        new TecladoEspecificoTemplate(),
+        new CaracterTemplate(),
+        new PantallaTemplate(),
+        new RectanguloTemplate(),
+        new ParpadeoInfinitoTemplate(),
+        new ParpadeoLimiteTemplate(),
+        new ParpadeoSalidaTemplate(),
+        new ParpadeoSalidaEspecificaTemplates(),
+        new CursorDiagonalTemplate(),
     };
 
     /**
-     * Devuelve todas las plantillas registradas.
+     * Devuelve todas las plantillas
      */
     public static AsmTemplate[] getAll() {
         return TEMPLATES;
     }
 
     /**
-     * Busca una plantilla por su comando corto (ej: "cb").
-     * Devuelve null si no la encuentra.
+     * Busca una plantilla por su comando
+     * Devuelve null si no la encuentra
      */
     public static AsmTemplate findByCommand(String command) {
         for (AsmTemplate template : TEMPLATES) {
